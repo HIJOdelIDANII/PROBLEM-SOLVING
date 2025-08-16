@@ -12,7 +12,7 @@ class Solution:
         for c in s:
             s_dict[c]+=1
         for c in t:
-            t_dict[c]+=1
+            t_dict[c]-=1
         return (True if s_dict == t_dict else False)
 
 

@@ -4,5 +4,5 @@ class Solution:
         for c in s:
             our_dict[c]+=1
         for c in t:
-            our_dict[c]+=1
+            our_dict[c]-=1
         return all(v == 0 for v in our_dict.values())
