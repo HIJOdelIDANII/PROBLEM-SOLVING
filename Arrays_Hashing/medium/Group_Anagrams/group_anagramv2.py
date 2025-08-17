@@ -1,7 +1,6 @@
 class Solution:
     def groupAnagrams(self, strs):
         maestro = {}
-        final_list = []
         new_list = []
         for str in strs:
             freq = [0] * 26
@@ -13,6 +12,4 @@ class Solution:
                 maestro[element[0]]=[element[1]]
             else:
                 maestro[element[0]].append(element[1])
-        for element in maestro:
-            final_list.append(maestro[element])
-        return(final_list)
+        return(list(maestro.values()))
